@@ -7,18 +7,16 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class Checker {
-    public static void main(String[] args) {
-        try {
-            URL url = new URL("http://localhost:8080/getLocale");
-            URLConnection yc = url.openConnection();
-            BufferedReader in = new BufferedReader(new InputStreamReader(
-                    yc.getInputStream()));
-            String inputLine;
-            while ((inputLine = in.readLine()) != null)
-                System.out.println(inputLine);
-            in.close();
+  public static void main(String[] args) {
+    try {
+      URL url = new URL("http://localhost:8080/getLocale");
+      URLConnection yc = url.openConnection();
+      BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
+      String inputLine;
+      while ((inputLine = in.readLine()) != null) System.out.println(inputLine);
+      in.close();
 
-        } catch (IOException ignored) {
-        }
+    } catch (IOException ignored) {
     }
+  }
 }
