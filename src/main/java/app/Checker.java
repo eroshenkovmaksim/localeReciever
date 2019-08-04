@@ -7,7 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class Checker {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         try {
             URL url = new URL("http://localhost:8080/getLocale");
             URLConnection yc = url.openConnection();
@@ -17,7 +17,8 @@ public class Checker {
             while ((inputLine = in.readLine()) != null)
                 System.out.println(inputLine);
             in.close();
-        } catch(IOException e){
+
+        } catch (IOException ignored) {
         }
     }
 }
